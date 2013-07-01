@@ -1,0 +1,19 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{D40F2FAC-4400-1FD8-3BD1-00F864B64AA8}") = "MultipurposeButton", "MultipurposeButton.vcxproj", "{F7AB7C7D-73A6-B7C7-8E19-545C334259E6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F7AB7C7D-73A6-B7C7-8E19-545C334259E6}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F7AB7C7D-73A6-B7C7-8E19-545C334259E6}.Debug|Win32.Build.0 = Debug|Win32
+		{F7AB7C7D-73A6-B7C7-8E19-545C334259E6}.Release|Win32.ActiveCfg = Release|Win32
+		{F7AB7C7D-73A6-B7C7-8E19-545C334259E6}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

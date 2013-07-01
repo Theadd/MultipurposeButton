@@ -1,0 +1,16 @@
+{
+  "id":             "juce_freetype",
+  "name":           "JUCE wrapper for the FreeType library",
+  "version":        "2.0.40",
+  "description":    "Classes for using the FreeType library on any platform.",
+  "website":        "http://www.juce.com/juce",
+  "license":        "GPL/Commercial",
+
+  "dependencies":   [ { "id": "juce_graphics",   "version": "matching" } ],
+
+  "include":        "juce_freetype.h",
+
+  "compile":        [ { "file": "juce_freetype.cpp" } ],
+
+  "browse":         [ "freetype/*" ]
+}

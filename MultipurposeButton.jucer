@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<JUCERPROJECT id="N5bJXt" name="MultipurposeButton" projectType="guiapp" version="0.2.0"
+              bundleIdentifier="com.github.theadd" jucerVersion="3.0.0" companyName="None">
+  <MAINGROUP id="v2buzs" name="MultipurposeButton">
+    <GROUP id="{D9C6CE6B-57CB-D668-F369-BEF26C0D888D}" name="Source">
+      <GROUP id="{D359A773-C642-7CD5-3801-33DEE6A57A60}" name="BinaryData">
+        <FILE id="xtHRtC" name="background.png" compile="0" resource="1" file="Source/BinaryData/background.png"/>
+        <FILE id="QwZSvJ" name="knobstrip.png" compile="0" resource="1" file="Source/BinaryData/knobstrip.png"/>
+      </GROUP>
+      <GROUP id="{DA180325-BC7B-940A-4A04-092A35CAE7FE}" name="Styles">
+        <FILE id="eTk97w" name="LookAndFeelCustom.cpp" compile="1" resource="0"
+              file="Source/Styles/LookAndFeelCustom.cpp"/>
+        <FILE id="sAEriS" name="LookAndFeelCustom.h" compile="0" resource="0"
+              file="Source/Styles/LookAndFeelCustom.h"/>
+      </GROUP>
+      <FILE id="FvqIp1" name="MultipurposeButton.cpp" compile="1" resource="0"
+            file="Source/MultipurposeButton.cpp"/>
+      <FILE id="ipuBWF" name="MultipurposeButton.h" compile="0" resource="0"
+            file="Source/MultipurposeButton.h"/>
+      <FILE id="fjCjkr" name="DemoWindow.cpp" compile="1" resource="0" file="Source/DemoWindow.cpp"/>
+      <FILE id="cDYdv0" name="Main.cpp" compile="1" resource="0" file="Source/Main.cpp"/>
+    </GROUP>
+  </MAINGROUP>
+  <MODULES>
+    <MODULE id="juce_core" showAllCode="1" useLocalCopy="1"/>
+    <MODULE id="juce_events" showAllCode="1" useLocalCopy="1"/>
+    <MODULE id="juce_graphics" showAllCode="1" useLocalCopy="1"/>
+    <MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="1"/>
+    <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="1"/>
+    <MODULE id="juce_gui_extra" showAllCode="1" useLocalCopy="1"/>
+    <MODULE id="juce_gui_audio" showAllCode="1" useLocalCopy="1"/>
+    <MODULE id="juce_cryptography" showAllCode="1" useLocalCopy="1"/>
+    <MODULE id="juce_video" showAllCode="1" useLocalCopy="1"/>
+    <MODULE id="juce_opengl" showAllCode="1" useLocalCopy="1"/>
+    <MODULE id="juce_freetype" showAllCode="1" useLocalCopy="1"/>
+    <MODULE id="juce_box2d" showAllCode="1" useLocalCopy="1"/>
+  </MODULES>
+  <EXPORTFORMATS>
+    <VS2010 targetFolder="Builds/VisualStudio2010" libraryType="1" juceFolder="..\JUCE\modules">
+      <CONFIGURATIONS>
+        <CONFIGURATION name="Debug" winWarningLevel="4" generateManifest="1" winArchitecture="32-bit"
+                       isDebug="1" optimisation="1" targetName="MultipurposeButton"/>
+        <CONFIGURATION name="Release" winWarningLevel="4" generateManifest="1" winArchitecture="32-bit"
+                       isDebug="0" optimisation="2" targetName="MultipurposeButton"/>
+      </CONFIGURATIONS>
+    </VS2010>
+  </EXPORTFORMATS>
+  <JUCEOPTIONS JUCE_BUILD_NPAPI="enabled" JUCE_BUILD_ACTIVEX="enabled"/>
+</JUCERPROJECT>
