@@ -148,6 +148,12 @@ public:
                                                 Button* closeButton,
                                                 bool positionTitleBarButtonsOnLeft);
 
+	//EDIT
+	/*
+	void drawLabel(Graphics& g, Label& label);
+	const Typeface::Ptr getTypefaceForFont (Font const& font);
+	*/
+
 
 private:
     //==============================================================================

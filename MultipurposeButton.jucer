@@ -4,11 +4,18 @@
               bundleIdentifier="com.github.theadd" jucerVersion="3.0.0" companyName="None">
   <MAINGROUP id="v2buzs" name="MultipurposeButton">
     <GROUP id="{D9C6CE6B-57CB-D668-F369-BEF26C0D888D}" name="Source">
+      <FILE id="GVIw3x" name="FreeTypeFaces.cpp" compile="1" resource="0"
+            file="Source/FreeTypeFaces.cpp"/>
+      <FILE id="QIxv5B" name="FreeTypeFaces.h" compile="0" resource="0" file="Source/FreeTypeFaces.h"/>
       <GROUP id="{D359A773-C642-7CD5-3801-33DEE6A57A60}" name="BinaryData">
+        <FILE id="S1vQuC" name="FontAwesome.otf" compile="0" resource="1" file="Source/BinaryData/FontAwesome.otf"/>
+        <FILE id="fTMTQd" name="FontAwesome.svg" compile="0" resource="1" file="Source/BinaryData/FontAwesome.svg"/>
+        <FILE id="exrnZn" name="FontAwesome.ttf" compile="0" resource="1" file="Source/BinaryData/FontAwesome.ttf"/>
         <FILE id="xtHRtC" name="background.png" compile="0" resource="1" file="Source/BinaryData/background.png"/>
         <FILE id="QwZSvJ" name="knobstrip.png" compile="0" resource="1" file="Source/BinaryData/knobstrip.png"/>
       </GROUP>
       <GROUP id="{DA180325-BC7B-940A-4A04-092A35CAE7FE}" name="Styles">
+        <FILE id="I1DVRg" name="CustomLF.h" compile="0" resource="0" file="Source/Styles/CustomLF.h"/>
         <FILE id="eTk97w" name="LookAndFeelCustom.cpp" compile="1" resource="0"
               file="Source/Styles/LookAndFeelCustom.cpp"/>
         <FILE id="sAEriS" name="LookAndFeelCustom.h" compile="0" resource="0"

@@ -1,4 +1,4 @@
-/*
+﻿/*
   ==============================================================================
 
     DemoWindow.cpp
@@ -36,13 +36,15 @@ public:
         TextButton3.setButtonText("Left");
         TextButton3.setConnectedEdges(1);
         addAndMakeVisible(&TextButton3);
-        TextButton4.setBounds(209, 28, 25, 25);
+        TextButton4.setBounds(209, 28, 100, 25);
         TextButton4.setName("TextButton4");
+		TextButton4.setComponentEffect(new DropShadowEffect());
         TextButton4.setButtonText("1");
         TextButton4.setConnectedEdges(0);
         addAndMakeVisible(&TextButton4);
-        TextButton5.setBounds(239, 28, 35, 35);
+        TextButton5.setBounds(239, 65, 200, 35);
         TextButton5.setName("TextButton5");
+		TextButton5.setComponentEffect(new DropShadowEffect());
         TextButton5.setButtonText("2");
         TextButton5.setConnectedEdges(0);
 		//TextButton5.setLookAndFeel(&LookAndFeel());
@@ -74,6 +76,25 @@ public:
 		
 		selector.setCurrentColour(Colour((juce::uint8) 83, (juce::uint8) 94, (juce::uint8) 104, (juce::uint8) 255));
 		selector.addChangeListener(this);
+
+
+		Label1.setBounds(0, 0, 165, 24);
+		Label1.setFont(Font("FontAwesome", 12.f, 0));
+		Label1.setText (L"", NotificationType::dontSendNotification);
+		//(juce_wchar) 0x2022
+		Label1.setColour(Label::backgroundColourId, Colour::fromString("FFFFFFFF"));
+        Label1.setColour(Label::textColourId, Colour::fromString("FF000000"));
+        Label1.setEditable(true);
+        Label1.setName("Label");
+        addAndMakeVisible(&Label1);
+
+		TextButton1.setButtonStyle(5);
+		TextButton2.setButtonStyle(5);
+		TextButton2.setButtonIcon(MultipurposeButton::ButtonIcon::icon_ok);
+		TextButton3.setButtonStyle(1);
+		TextButton4.setButtonStyle(5);
+		TextButton5.setButtonStyle(5);
+
 
     }
 
@@ -132,6 +153,7 @@ private:
     ToggleButton ToggleButton2;
     ToggleButton ToggleButton3;
 	ColourSelector selector;
+	Label Label1;
 
 };
 
@@ -147,6 +169,7 @@ public:
 		LookAndFeelCustom::getInstance()->setColour(TextButton::buttonColourId, Colour(Colour((juce::uint8) 83, (juce::uint8) 94, (juce::uint8) 104, (juce::uint8) 255)));
 		LookAndFeelCustom::getInstance()->setColour(TextButton::textColourOffId, Colours::transparentWhite.withAlpha(0.9f));
 		LookAndFeelCustom::getInstance()->setColour(TextButton::textColourOnId, Colours::blue.withAlpha(0.9f));
+		//FreeTypeFaces::addFaceFromMemory(7.f, 12.f, true, BinaryData::mine, BinaryData::mineSize);
         setBounds(75, 45, 310, 350);
         setName("Multipurpose Buttons");
         setTitleBarHeight(26);

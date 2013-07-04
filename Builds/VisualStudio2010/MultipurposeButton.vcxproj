@@ -125,6 +125,7 @@
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Source\FreeTypeFaces.cpp"/>
     <ClCompile Include="..\..\Source\Styles\LookAndFeelCustom.cpp"/>
     <ClCompile Include="..\..\Source\MultipurposeButton.cpp"/>
     <ClCompile Include="..\..\Source\DemoWindow.cpp"/>
@@ -983,6 +984,8 @@
     <ClCompile Include="..\..\JuceLibraryCode\modules\juce_video\juce_video.cpp"/>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\Source\FreeTypeFaces.h"/>
+    <ClInclude Include="..\..\Source\Styles\CustomLF.h"/>
     <ClInclude Include="..\..\Source\Styles\LookAndFeelCustom.h"/>
     <ClInclude Include="..\..\Source\MultipurposeButton.h"/>
     <ClInclude Include="..\..\JuceLibraryCode\modules\juce_box2d\box2d\Box2D.h"/>
@@ -1342,6 +1345,9 @@
     <ClInclude Include="..\..\JuceLibraryCode\JuceHeader.h"/>
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\..\Source\BinaryData\FontAwesome.otf"/>
+    <None Include="..\..\Source\BinaryData\FontAwesome.svg"/>
+    <None Include="..\..\Source\BinaryData\FontAwesome.ttf"/>
     <None Include="..\..\Source\BinaryData\background.png"/>
     <None Include="..\..\Source\BinaryData\knobstrip.png"/>
     <None Include="..\..\JuceLibraryCode\modules\juce_box2d\box2d\README.txt"/>

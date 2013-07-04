@@ -10,6 +10,7 @@
 
 #include "../../JuceLibraryCode/JuceHeader.h"
 #include "../MultipurposeButton.h"
+#include "../FreeTypeFaces.h"
 #include "LookAndFeelCustom.h"
 
 namespace LookAndFeelHelpers
@@ -44,6 +45,7 @@ namespace LookAndFeelHelpers
 
     static Typeface::Ptr getTypefaceForFontFromLookAndFeel (const Font& font)
     {
+		DBG(("getTypefaceForFontFromLookAndFeel"));
         return LookAndFeel::getDefaultLookAndFeel().getTypefaceForFont (font);
     }
 }
@@ -83,6 +85,9 @@ LookAndFeelCustom::LookAndFeelCustom()
     setColour (TextEditor::focusedOutlineColourId,  findColour (TextButton::buttonColourId));
 
     //scrollbarShadow.setShadowProperties (2.2f, 0.5f, 0, 0);
+	/*FreeTypeFaces::addFaceFromMemory(
+			7.f, 12.f, false,
+			BinaryData::FontAwesome_ttf, BinaryData::FontAwesome_ttfSize);*/
 }
 
 LookAndFeelCustom::~LookAndFeelCustom()
@@ -139,6 +144,7 @@ void LookAndFeelCustom::drawButtonBackground (Graphics& g,
 {
 	DBG((String("DRAWING BUTTON "+button.getName())));
 	bool isGlobal = true;	//sets if its a MultipurposeButton or not
+	bool hasIcon = false;	//tells if this button has an icon on the left
 	MultipurposeButton *lf;
 	try {
 		lf = dynamic_cast<MultipurposeButton*> (&button);
@@ -152,6 +158,10 @@ void LookAndFeelCustom::drawButtonBackground (Graphics& g,
 	if (isGlobal) {
 		if (!isButtonDown)
 			isButtonDown = lf->getToggleState();
+
+		if ((lf->buttonStyle & MultipurposeButton::ButtonStyle::Icon) != 0)
+			hasIcon = true;
+
 	}
     /*const int width = button.getWidth();
     const int height = button.getHeight();
@@ -979,3 +989,73 @@ void LookAndFeelCustom::positionDocumentWindowButtons (DocumentWindow&,
     if (minimiseButton != nullptr)
         minimiseButton->setBounds (x, titleBarY - 2, buttonW, titleBarH);
 }
+
+/*
+void LookAndFeelCustom::drawLabel(Graphics& g, Label& label)
+{
+	// set up the font with the right size
+	//Font font(label.getFont());
+	//font.setHeight(silkFontSizeSmall);
+	//g.setFont(Font ("Verdana", 10.f, Font::plain));
+	DBG(("DRAW LABEL!! " + label.getName()));
+	//LookAndFeel::drawLabel(g, label);
+	//return;
+	g.setFont(label.getFont());//(Font (10.f));//(Font("FontAwesome", 12.f, 0));	//(Font (10.f));
+	//StringArray fonts = Font::findAllTypefaceNames();
+	//for (int i = 0; i < fonts.size(); ++i) {
+	//	DBG((fonts[i]));
+	//}
+
+	DBG(("Typeface name: " + label.getFont().getTypefaceName()));
+
+	g.fillAll (label.findColour(Label::backgroundColourId));
+
+	const float alpha = label.isEnabled() ? 1.0f : 0.5f;
+
+	g.setColour (label.findColour (Label::textColourId).withMultipliedAlpha (alpha));
+	g.drawFittedText(label.getText(), 4, 4,
+		label.getWidth() - 2, label.getHeight() - 8,
+		Justification::centredLeft, 1, 1.0f);
+
+
+	g.setColour (label.findColour (Label::outlineColourId).withMultipliedAlpha (alpha));
+	g.drawRect (0, 0, label.getWidth(), label.getHeight());
+
+}
+
+
+
+const Typeface::Ptr LookAndFeelCustom::getTypefaceForFont (Font const& font)
+{
+	DBG((String("getTypefaceForFont,")));
+	Typeface::Ptr tf;
+	String faceName (font.getTypefaceName());
+
+	DBG((String("getTypefaceForFont, faceName = " + faceName)));
+
+	// Make requests for the default sans serif font use our
+	// FreeType hinted font instead.
+	if (faceName == Font::getDefaultSansSerifFontName())
+	{
+		DBG(faceName);
+
+
+		// Create a new Font identical to the old one, then
+		// switch the name to our hinted font.
+		Font f (font);
+		// You'll need to know the exact name embedded in the font. There
+		// are a variety of free programs for retrieving this information.
+		f.setTypefaceName ("FontAwesome");
+
+		DBG(f.getTypefaceName());
+
+		// Now get the hinted typeface.
+		tf = FreeTypeFaces::createTypefaceForFont (f);
+	}
+	// If we got here without creating a new typeface
+	// then just use the default LookAndFeel behavior.
+	if (!tf)
+		tf = LookAndFeel::getTypefaceForFont (font);
+	return tf;
+}
+*/

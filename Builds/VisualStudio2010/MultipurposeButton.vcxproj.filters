@@ -256,6 +256,9 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Source\FreeTypeFaces.cpp">
+      <Filter>MultipurposeButton\Source</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Styles\LookAndFeelCustom.cpp">
       <Filter>MultipurposeButton\Source\Styles</Filter>
     </ClCompile>
@@ -1212,6 +1215,12 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\Source\FreeTypeFaces.h">
+      <Filter>MultipurposeButton\Source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Styles\CustomLF.h">
+      <Filter>MultipurposeButton\Source\Styles</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\Styles\LookAndFeelCustom.h">
       <Filter>MultipurposeButton\Source\Styles</Filter>
     </ClInclude>
@@ -2285,6 +2294,15 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\..\Source\BinaryData\FontAwesome.otf">
+      <Filter>MultipurposeButton\Source\BinaryData</Filter>
+    </None>
+    <None Include="..\..\Source\BinaryData\FontAwesome.svg">
+      <Filter>MultipurposeButton\Source\BinaryData</Filter>
+    </None>
+    <None Include="..\..\Source\BinaryData\FontAwesome.ttf">
+      <Filter>MultipurposeButton\Source\BinaryData</Filter>
+    </None>
     <None Include="..\..\Source\BinaryData\background.png">
       <Filter>MultipurposeButton\Source\BinaryData</Filter>
     </None>

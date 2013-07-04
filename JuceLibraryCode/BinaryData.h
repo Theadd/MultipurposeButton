@@ -6,6 +6,15 @@
 
 namespace BinaryData
 {
+    extern const char*   FontAwesome_otf;
+    const int            FontAwesome_otfSize = 61896;
+
+    extern const char*   FontAwesome_svg;
+    const int            FontAwesome_svgSize = 197829;
+
+    extern const char*   FontAwesome_ttf;
+    const int            FontAwesome_ttfSize = 79076;
+
     extern const char*   background_png;
     const int            background_pngSize = 15237;
 
