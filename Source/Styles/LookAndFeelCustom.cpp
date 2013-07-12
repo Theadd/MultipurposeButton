@@ -163,6 +163,7 @@ void LookAndFeelCustom::drawButtonBackground (Graphics& g,
 			hasIcon = true;
 
 	}
+	DBG("\tis mouse over / button down: " + String(isMouseOverButton) + String(" / ") + String(isButtonDown));
     /*const int width = button.getWidth();
     const int height = button.getHeight();
 
@@ -279,9 +280,9 @@ void LookAndFeelCustom::drawButtonBackground (Graphics& g,
 		laterals.addColour (0.3, Colours::transparentBlack);
 		laterals.addColour (0.7, Colours::transparentBlack);
 		g.setGradientFill (laterals);
-		g.addTransform(AffineTransform::rotation(2.0f));
+		//g.addTransform(AffineTransform::rotation(2.0f));
         g.fillPath (p);//, AffineTransform::identity.rotated(1.57079633f));
-		g.addTransform(AffineTransform::identity);
+		//g.addTransform(AffineTransform::identity);
 	}
 
     //g.setColour (bc);
